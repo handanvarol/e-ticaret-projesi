@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ürün Ekle</title>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDgg5kN1ia6oyx5HUeVxQrmzNRe2h1wD-s",
+      authDomain: "eticaretweb-7f739.firebaseapp.com",
+      projectId: "eticaretweb-7f739",
+      storageBucket: "eticaretweb-7f739.appspot.com",
+      messagingSenderId: "196675133617",
+      appId: "1:196675133617:web:cd1775ae6df31b191d0290"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function urunEkle(event) {
+      event.preventDefault(); // sayfanın yenilenmesini engeller
+
+      const name = document.getElementById("name").value;
+      const price = parseFloat(document.getElementById("price").value);
+      const image = document.getElementById("image").value;
+      const description = document.getElementById("description").value;
+
+      try {
+        await addDoc(collection(db, "products"), {
+          name,
+          price,
+          image,
+          description
+        });
+        alert("Ürün başarıyla eklendi!");
+      } catch (error) {
+        console.error("Ürün eklenirken hata oluştu:", error);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("urunForm").addEventListener("submit", urunEkle);
+    });
+  </script>
+</head>
+<body>
+  <h2>Ürün Ekle</h2>
+  <form id="urunForm">
+    <input type="text" id="name" placeholder="Ürün adı" required><br><br>
+    <input type="text" id="description" placeholder="Açıklama" required><br><br>
+    <input type="number" id="price" placeholder="Fiyat" required><br><br>
+    <input type="text" id="image" placeholder="Görsel linki (https://...)" required><br><br>
+    <button type="submit">Ürünü Kaydet</button>
+  </form>
+</body>
+</html>
