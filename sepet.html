@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sepetim</title>
+  <link rel="stylesheet" href="sepet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <div class="sepet-container">
+    <div class="odeme-uyari">
+      <i class="fa-solid fa-truck"></i>
+      Siparişlerinizde <b>yalnızca kapıda ödeme</b> geçerlidir.
+    </div>
+    <h1>Sepetim</h1>
+    <a href="index.html" class="alisverise-devam-btn">
+      <i class="fa fa-arrow-left"></i> Alışverişe Devam Et
+    </a>
+    <div id="sepet-urunler"></div>
+    <div class="toplam-row">
+      Toplam: <span id="toplam-fiyat">0 ₺</span>
+    <<div id="siparisOnay" style="
+    display: none;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px #c8d8fa88;
+    color: #16803e;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 28px auto 22px auto;
+    padding: 28px 0;
+    max-width: 400px;
+    text-align: center;
+    z-index: 999;
+    position: relative;
+">
+  <i class="fa fa-check-circle" style="font-size:2em; color:#38c172; margin-bottom:12px; display:block;"></i>
+  Siparişiniz başarıyla onaylandı!<br>
+  Ana sayfaya yönlendiriliyorsunuz...
+</div>
+
+    <form id="siparisForm" autocomplete="off">
+      <h2>Sipariş Bilgileri</h2>
+      <input type="text" id="adsoyad" placeholder="Ad Soyad" required>
+      <input type="email" id="email" placeholder="E-posta" required>
+      <input type="tel" id="telefon" placeholder="Telefon Numarası" required>
+      <textarea id="adres" placeholder="Açık Adres" required></textarea>
+      <button type="submit" class="siparis-btn">Siparişi Tamamla</button>
+    </form>
+  </div>
+
+<!-- ...eski kodlar... -->
+<div class="toplam-row">
+  Toplam: <span id="toplam-fiyat">0 ₺</span>
+</div>
+
+<button id="yorumPuanBtn" class="yorum-btn">Yorum ve Puan Ver</button>
+
+<!-- Yorum & Puan Modalı -->
+<div id="yorumModal" class="yorum-modal">
+  <div class="yorum-modal-icerik">
+    <h3>Yorum ve Puan Ver</h3>
+    <div id="yildizlar" style="font-size:2em;">
+      <span class="yildiz" data-puan="1">&#9733;</span>
+      <span class="yildiz" data-puan="2">&#9733;</span>
+      <span class="yildiz" data-puan="3">&#9733;</span>
+      <span class="yildiz" data-puan="4">&#9733;</span>
+      <span class="yildiz" data-puan="5">&#9733;</span>
+    </div>
+    <textarea id="yorumMetin" placeholder="Yorumunuzu yazınız..." rows="3" style="width:100%;margin-top:10px;"></textarea>
+    <div id="yorumUyari" style="color:red;font-size:0.97em;margin:7px 0;"></div>
+    <button id="yorumGonderBtn" style="margin-right:10px;">Gönder</button>
+    <button id="yorumKapatBtn">Kapat</button>
+  </div>
+</div>
+<!-- ...eski kodlar... -->
+
+
+  <script src="sepet.js"></script>
+</body>
+</html>
+

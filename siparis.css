@@ -1,0 +1,17 @@
+body { background: #f5f6fa; font-family: Arial,sans-serif; }
+.siparis-container {
+  background: #fff; max-width: 430px; margin: 50px auto;
+  border-radius: 13px; box-shadow: 0 3px 18px #e5e7fa; padding: 34px 26px 22px 26px;
+}
+h1 { text-align: center; color: #1849ad; margin-bottom: 24px; }
+form { display: flex; flex-direction: column; gap: 14px; }
+input, textarea {
+  padding: 8px; border: 1px solid #dde3f0; border-radius: 7px; font-size: 1em;
+}
+textarea { min-height: 54px; resize: vertical; }
+button[type="submit"] {
+  margin-top: 10px; background: #1464fa; color: #fff; border: none; border-radius: 8px;
+  font-size: 1.08em; padding: 11px 0; font-weight: bold; cursor: pointer; transition: background 0.16s;
+}
+button[type="submit"]:hover { background: #0e418c; }
+#siparis-sonuc { text-align: center; color: #2ca231; margin-top: 18px; font-weight: bold; }

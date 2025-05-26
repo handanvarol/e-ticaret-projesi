@@ -1,0 +1,280 @@
+body {
+  background: linear-gradient(120deg, #e8f0ff 0%, #fff 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+}
+
+.admin-container {
+  max-width: 1350px;
+  margin: 32px auto 32px auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 36px #c8d8fa;
+  padding: 24px 34px 30px 34px;
+  min-height: 92vh;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.panel-header h2 {
+  color: #1464fa;
+  font-size: 2em;
+  margin: 0;
+  letter-spacing: .7px;
+}
+.cikis-btn {
+  background: linear-gradient(90deg, #fd7c52 60%, #fdb675 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 13px;
+  box-shadow: 0 1px 9px #ffd6c0;
+  cursor: pointer;
+  transition: background .13s;
+}
+.cikis-btn:hover { background: linear-gradient(90deg, #d53c15 60%, #ff9930 100%); }
+
+.admin-main {
+  display: flex;
+  gap: 44px;
+}
+.sol-kolon {
+  flex: 2.2;
+  min-width: 350px;
+  margin-right: 20px;
+}
+
+.urun-form, #duzenle-form {
+  background: #f7faff;
+  border-radius: 12px;
+  padding: 19px 18px 14px 18px;
+  box-shadow: 0 2px 10px #d7e9fc22;
+  margin-bottom: 22px;
+}
+.urun-form h3 { color: #16803e; margin-top: 0; font-size: 1.18em;}
+.alt-baslik { color: #2351b3; margin: 14px 0 10px 0; font-size: 1.1em; }
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 9px;
+  border-radius: 8px;
+  border: 1.2px solid #dde6fa;
+  padding: 10px 13px;
+  font-size: 1.03em;
+  background: #fff;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+textarea { resize: vertical; min-height: 50px; }
+
+.ekle-btn {
+  background: linear-gradient(90deg, #1464fa 80%, #48c6f5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 0;
+  font-size: 1.07em;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 7px;
+  transition: background .12s;
+}
+.ekle-btn:hover {
+  background: linear-gradient(90deg, #0e418c 80%, #24b7f8 100%);
+}
+
+.renkler-row {
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px 13px;
+  align-items: center;
+}
+.renkler-row span {
+  color: #4288e4; font-size: .98em; margin-right: 6px; font-weight: bold;
+}
+.renkler-row label {
+  color: #335; font-size: .97em;
+}
+
+#tisortler-kartlar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 19px;
+  margin-bottom: 30px;
+}
+.tisort-kart {
+  background: #f8faff;
+  border-radius: 11px;
+  box-shadow: 0 2px 10px #dde6fa44;
+  padding: 13px 13px 13px 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-height: 200px;
+  position: relative;
+}
+.tisort-kart img {
+  width: 85px; height: 85px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #e3ecfa;
+  margin-bottom: 8px;
+}
+.tisort-kart .isim {
+  font-weight: bold; color: #1648a7; font-size: 1.1em; margin-bottom: 4px;
+}
+.tisort-kart .detay { color: #4589e7; font-size: .99em; margin-bottom: 1px;}
+.tisort-kart .renkler { color: #764eb0; font-size: .98em; margin-bottom: 4px;}
+.tisort-kart .desc { color: #444f63; font-size: .96em; margin-bottom: 3px;}
+.tisort-kart .btn-row {
+  display: flex; gap: 12px; margin-top: 7px;
+}
+.tisort-kart .btn-row button {
+  background: linear-gradient(90deg, #1464fa 80%, #48c6f5 100%);
+  color: #fff; border: none; border-radius: 7px; padding: 7px 19px; font-size: .98em; font-weight: bold;
+  cursor: pointer; transition: background .13s;
+}
+.tisort-kart .btn-row button:hover { background: linear-gradient(90deg, #0e418c 80%, #24b7f8 100%); }
+
+.stok-tablo {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  margin-bottom: 22px;
+  background: #f6faff;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.stok-tablo th, .stok-tablo td {
+  padding: 7px 11px; font-size: .98em; text-align: left;
+}
+.stok-tablo th { background: #e2eaf7; color: #1464fa;}
+.stok-tablo td.stok-az { color: #e51c23; font-weight: bold;}
+.stok-tablo td.stok-orta { color: #e6b31c; font-weight: bold;}
+.stok-tablo td.stok-cok { color: #16803e; font-weight: bold;}
+
+.yorumlar-paneli {
+  min-width: 320px;
+  max-width: 420px;
+  background: #f8faff;
+  border-radius: 17px;
+  box-shadow: 0 2px 15px #d7e9fc2c;
+  padding: 23px 19px 22px 19px;
+  margin-left: auto;
+  height: fit-content;
+}
+.yorumlar-paneli h3 {
+  color: #1464fa;
+  font-size: 1.19em;
+  margin-bottom: 18px;
+  text-align: left;
+}
+.yorum-kart {
+  background: #fff;
+  border-radius: 9px;
+  box-shadow: 0 1px 7px #c2dbfa44;
+  padding: 13px 12px;
+  margin-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+}
+.yorum-yildizlar {
+  color: #fbc42b;
+  font-size: 1.16em;
+  letter-spacing: 1px;
+}
+.yorum-txt {
+  color: #444;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+.yorum-sil-btn {
+  position: absolute;
+  top: 11px; right: 13px;
+  background: #e44;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 13px;
+  cursor: pointer;
+  font-size: .99em;
+  transition: background .11s;
+}
+.yorum-sil-btn:hover { background: #a00; }
+.yorum-tarih {
+  color: #99a7be;
+  font-size: .87em;
+  margin-top: 3px;
+}
+
+.duzenle-modal {
+  display: none;
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(60,90,150,0.18);
+  align-items: center; justify-content: center;
+  z-index: 1002;
+}
+.modal-icerik {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 30px #b6d5fa;
+  padding: 38px 35px 26px 35px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.modal-kapat {
+  position: absolute; top: 10px; right: 14px;
+  font-size: 1.8em;
+  color: #fd7c52;
+  cursor: pointer;
+}
+.siteyi-goruntule-btn {
+  position: fixed;
+  left: 38px;
+  bottom: 36px;
+  background: linear-gradient(90deg, #1464fa 70%, #48c6f5 100%);
+  color: #fff;
+  border-radius: 11px;
+  font-size: 1.06em;
+  font-weight: bold;
+  padding: 14px 30px 14px 23px;
+  text-decoration: none;
+  box-shadow: 0 2px 18px #b7cdfd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+  transition: background .15s, box-shadow .15s, color .12s;
+  border: none;
+}
+.siteyi-goruntule-btn:hover {
+  background: linear-gradient(90deg, #0e418c 80%, #24b7f8 100%);
+  color: #e6eaff;
+  box-shadow: 0 6px 32px #aecbfd;
+}
+@media (max-width: 700px) {
+  .siteyi-goruntule-btn {
+    left: 12px;
+    bottom: 15px;
+    font-size: .99em;
+    padding: 10px 20px 10px 14px;
+  }
+}
+@media (max-width:1200px) {
+  .admin-main { flex-direction: column; gap: 18px;}
+  .yorumlar-paneli { margin: 33px auto 0 auto;}
+}

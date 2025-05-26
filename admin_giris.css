@@ -1,0 +1,157 @@
+body {
+  background: linear-gradient(135deg, #d1e3fa 0%, #eaf0fa 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.giris-bg {
+  width: 100vw; height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(120deg, #fff 80%, #e6eaff 100%);
+}
+.giris-main-flex {
+  display: flex;
+  background: #f6f9ff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #c8d8fa;
+  overflow: hidden;
+  min-width: 650px;
+  max-width: 970px;
+}
+.giris-left {
+  background: linear-gradient(135deg, #eaf0fa 0%, #bee6ff 100%);
+  width: 320px;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 38px 12px 27px 12px;
+  box-shadow: 8px 0 28px #e7eefb44;
+}
+.giris-img {
+  width: 120px; height: 120px; object-fit: contain;
+  margin-bottom: 12px;
+}
+.giris-slogan {
+  font-size: 1.19em;
+  color: #2769cc;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.giris-markasi {
+  font-size: 1.05em;
+  color: #494f61;
+  margin-bottom: 8px;
+  font-weight: 500;
+  letter-spacing: .6px;
+}
+.giris-container {
+  flex: 1 1 0;
+  padding: 48px 38px 32px 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 340px;
+}
+h2 {
+  color: #1464fa;
+  font-size: 2em;
+  margin-bottom: 18px;
+  letter-spacing: .7px;
+}
+form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px 13px;
+  margin-bottom: 15px;
+  border: 1.5px solid #dde6fa;
+  border-radius: 10px;
+  font-size: 1.09em;
+  background: #f6f9ff;
+  transition: border-color 0.15s;
+}
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #1464fa;
+  outline: none;
+}
+.pw-row {
+  position: relative;
+  width: 100%;
+}
+.pw-row input[type="password"] {
+  margin-bottom: 0;
+}
+#sifreGoz {
+  position: absolute;
+  right: 13px; top: 15px;
+  color: #b1b1c7;
+  font-size: 1.13em;
+  cursor: pointer;
+  transition: color .13s;
+}
+#sifreGoz:hover { color: #1464fa; }
+.robot-dogrulama {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  margin-top: 8px;
+  font-size: 1em;
+}
+button[type="submit"] {
+  background: linear-gradient(90deg, #1464fa 80%, #48c6f5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  padding: 12px 35px;
+  font-size: 1.14em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 10px #d1e3fa;
+  margin-top: 8px;
+  margin-bottom: 7px;
+  transition: background .16s, box-shadow 0.13s;
+}
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #0e418c 60%, #24b7f8 100%);
+  box-shadow: 0 4px 18px #b3d3fd;
+}
+.hata {
+  color: #d81e1e;
+  font-size: 1em;
+  min-height: 28px;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+.form-alt-info {
+  font-size: .99em;
+  margin-top: 23px;
+  color: #3e5c8a;
+  text-align: center;
+  opacity: .8;
+}
+.form-alt-info a {
+  color: #1475eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+.form-alt-info i {
+  margin-right: 4px;
+  color: #2d6be8;
+}
+@media (max-width: 860px) {
+  .giris-main-flex { min-width: 100vw; flex-direction: column; }
+  .giris-left { width: 100%; box-shadow: none; border-bottom: 1.5px solid #e3e9f6;}
+  .giris-container { min-width: unset; }
+}

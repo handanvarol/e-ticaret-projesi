@@ -1,0 +1,242 @@
+body {
+  background: linear-gradient(120deg, #e8f0ff 0%, #fff 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+}
+.sepet-container {
+  max-width: 680px;
+  margin: 40px auto 32px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #c8d8fa;
+  padding: 35px 26px 28px 26px;
+}
+h1 {
+  text-align: center;
+  color: #1464fa;
+  font-size: 2.3em;
+  margin-bottom: 30px;
+  letter-spacing: .7px;
+}
+#sepet-urunler {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+.sepet-urun {
+  display: flex;
+  align-items: center;
+  background: #f6f9ff;
+  border-radius: 11px;
+  padding: 14px 13px;
+  box-shadow: 0 2px 10px #dde6fa7c;
+  position: relative;
+  min-height: 90px;
+}
+.sepet-urun img {
+  width: 65px; height: 65px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 14px;
+}
+.sepet-bilgi {
+  flex: 1;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.sepet-ad {
+  font-weight: bold; color: #1648a7; font-size: 1.09em;
+}
+.sepet-beden { color: #247fbb; font-size: .97em;}
+.sepet-fiyat { color: #16803e; font-size: 1em; margin-top: 3px;}
+.sepet-adet { color: #493e2e; font-size: .97em;}
+.sepet-toplam { color: #ea9908; font-weight: bold;}
+.sepet-sil-btn {
+  background: #fa4545;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 14px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: background .13s;
+}
+.sepet-sil-btn:hover { background: #b70c26; }
+.toplam-row {
+  text-align: right;
+  font-size: 1.22em;
+  color: #1464fa;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+form {
+  margin-top: 25px;
+  display: flex; flex-direction: column; gap: 14px;
+  background: #f5faff;
+  border-radius: 11px;
+  padding: 22px 12px;
+  box-shadow: 0 2px 8px #c8e4ff55;
+}
+form h2 {
+  text-align: left;
+  font-size: 1.21em;
+  color: #2875e5;
+  margin-bottom: 4px;
+  letter-spacing: .3px;
+}
+input, textarea {
+  border: 1.3px solid #dde6fa;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 1.07em;
+  font-family: inherit;
+  background: #fff;
+}
+textarea { resize: vertical; min-height: 55px;}
+.siparis-btn {
+  background: linear-gradient(90deg, #1464fa 80%, #48c6f5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 0;
+  font-size: 1.13em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background .15s;
+}
+.siparis-btn:hover {
+  background: linear-gradient(90deg, #0e418c 80%, #24b7f8 100%);
+}
+.puan-modal {
+  display: none;
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(60,90,150,0.18);
+  align-items: center; justify-content: center;
+  z-index: 1002;
+}
+.puan-icerik {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 30px #b6d5fa;
+  padding: 38px 35px 26px 35px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.puan-yildizlar {
+  font-size: 2.8em;
+  color: #e0e0e0;
+  margin: 17px 0 7px 0;
+  user-select: none;
+}
+.puan-yildizlar .yildiz {
+  cursor: pointer;
+  transition: color .16s;
+}
+.puan-yildizlar .yildiz.selected {
+  color: #fbc42b;
+}
+#puan-msg {
+  font-size: 1.07em;
+  color: #16803e;
+  min-height: 26px;
+  margin-bottom: 9px;
+}
+#puanKapatBtn {
+  background: #1464fa;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 23px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background .13s;
+}
+#puanKapatBtn:hover { background: #1841a0;}
+.odeme-uyari {
+  background: linear-gradient(90deg, #ffe486 80%, #ffcd57 100%);
+  color: #7e5903;
+  font-size: 1.09em;
+  padding: 14px 20px;
+  border-radius: 9px;
+  font-weight: 500;
+  box-shadow: 0 2px 9px #fff8b888;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+  letter-spacing: .2px;
+}
+.odeme-uyari i {
+  color: #f59d10;
+  font-size: 1.3em;
+}
+#puan-modal { /* Modal kaplaması */ 
+  position: fixed; left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(50,80,120,0.17); display: flex; align-items: center; justify-content: center; z-index: 99;
+}
+.puan-icerik {
+  background: #fff; padding: 32px 28px 26px 28px; border-radius: 14px; box-shadow: 0 2px 19px #bbd7fa; width: 330px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.puan-yildizlar .yildiz { font-size: 1.7em; color: #ddd; cursor: pointer; transition: color .17s;}
+.puan-yildizlar .selected { color: #ffd92b;}
+#yorum-metin { width: 100%; margin: 9px 0 3px 0; border-radius: 8px; border: 1.3px solid #dde6fa; padding: 9px 11px; font-size: 1.02em; background: #f7faff;}
+#yorumuGonderBtn { background: #16803e; color: #fff; border: none; border-radius: 8px; padding: 8px 22px; font-size: 1.08em; margin-top: 5px; cursor: pointer; margin-right: 8px; transition: background .12s;}
+#yorumuGonderBtn:hover { background: #23be68;}
+.alisverise-devam-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(90deg, #1464fa 75%, #49befb 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.07em;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 2px 11px #bdd5fa7c;
+  margin-bottom: 22px;
+  margin-top: 12px;
+  transition: background .13s, color .12s;
+  gap: 9px;
+  border: none;
+}
+.alisverise-devam-btn:hover {
+  background: linear-gradient(90deg, #083e98 75%, #24a7e5 100%);
+  color: #ffe;
+}
+.yorum-btn {
+  display: block;
+  margin: 14px auto 24px auto;
+  padding: 11px 28px;
+  background: linear-gradient(90deg,#1464fa 80%,#49befb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.07em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background .14s;
+}
+.yorum-btn:hover {
+  background: linear-gradient(90deg, #0e418c 80%, #24b7f8 100%);
+}
+
+.yorum-modal {
+  display: none;
+  position: fixed; left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(80,110,180,0.15);
+  align-items: center; justify-content: center; z-index: 2000;
+}
+.yorum-modal-icerik {
+  background: #fff; border-radius: 15px; box-shadow: 0 2px 18px #bbd7fa;
+  padding: 32px 32px 22px 32px; min-width: 300px; max-width: 90vw;
+  display: flex; flex-direction: column; align-items: center;
+}
+.yildiz { cursor: pointer; color: #bbb; transition: color .18s;}
+.yildiz.selected { color: #fbc42b; }

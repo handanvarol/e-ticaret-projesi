@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sipariş Oluştur</title>
+  <link rel="stylesheet" href="siparis.css">
+  <script defer src="siparis.js"></script>
+</head>
+<body>
+  <div class="siparis-container">
+    <h1>Sipariş Oluştur</h1>
+    <form id="siparis-form">
+      <label>Ad Soyad</label>
+      <input type="text" id="adsoyad" required>
+      <label>Adres</label>
+      <textarea id="adres" required></textarea>
+      <label>Telefon</label>
+      <input type="tel" id="telefon" required>
+      <button type="submit">Siparişi Gönder</button>
+    </form>
+    <div id="siparis-sonuc"></div>
+  </div>
+</body>
+</html>

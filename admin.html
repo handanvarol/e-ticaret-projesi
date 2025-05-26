@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ürün Yönetimi - Admin Panel</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <div class="admin-container">
+    <div class="panel-header">
+      <h2>Ürün Yönetimi</h2>
+      <button id="cikisBtn" class="cikis-btn">Çıkış</button>
+    </div>
+    <div class="admin-main">
+      <div class="sol-kolon">
+        <form id="tisort-form" class="urun-form">
+          <h3>Yeni Tişört Ekle</h3>
+          <input id="name" placeholder="Tişört adı" required>
+          <input id="price" type="number" placeholder="Fiyat" required>
+          <input id="stock" type="number" placeholder="Stok" required>
+          <input id="foto" placeholder="Fotoğraf (URL)" required>
+          <textarea id="desc" placeholder="Açıklama" required></textarea>
+          <div class="renkler-row">
+            <span>Renkler:</span>
+            <label><input type="checkbox" value="Beyaz" class="renk-check"> Beyaz</label>
+            <label><input type="checkbox" value="Siyah" class="renk-check"> Siyah</label>
+            <label><input type="checkbox" value="Kırmızı" class="renk-check"> Kırmızı</label>
+            <label><input type="checkbox" value="Mavi" class="renk-check"> Mavi</label>
+            <label><input type="checkbox" value="Yeşil" class="renk-check"> Yeşil</label>
+            <label><input type="checkbox" value="Sarı" class="renk-check"> Sarı</label>
+            <label><input type="checkbox" value="Gri" class="renk-check"> Gri</label>
+            <label><input type="checkbox" value="Mor" class="renk-check"> Mor</label>
+            <label><input type="checkbox" value="Pembe" class="renk-check"> Pembe</label>
+            <label><input type="checkbox" value="Kahverengi" class="renk-check"> Kahverengi</label>
+          </div>
+          <button type="submit" class="ekle-btn">Ekle</button>
+        </form>
+
+        <h3 class="alt-baslik">Ekli Tişörtler</h3>
+        <div id="tisortler-kartlar"></div>
+
+        <h3 class="alt-baslik">Stok Özeti</h3>
+        <table class="stok-tablo">
+          <thead>
+            <tr>
+              <th>Ürün</th>
+              <th>Stok</th>
+            </tr>
+          </thead>
+          <tbody id="stok-ozet-body"></tbody>
+        </table>
+      </div>
+      <!-- Sağda müşteri yorumları -->
+      <div class="yorumlar-paneli">
+        <h3>Müşteri Yorumları</h3>
+        <div id="yorumlar-listesi"></div>
+      </div>
+    </div>
+
+    <!-- Düzenle Modalı -->
+    <div id="duzenle-modal" class="duzenle-modal">
+      <div class="modal-icerik">
+        <span id="modalKapat" class="modal-kapat">&times;</span>
+        <h3>Tişörtü Düzenle</h3>
+        <form id="duzenle-form">
+          <input type="hidden" id="duzenle-id">
+          <input id="duzenle-name" placeholder="Tişört adı" required>
+          <input id="duzenle-price" type="number" placeholder="Fiyat" required>
+          <input id="duzenle-stock" type="number" placeholder="Stok" required>
+          <input id="duzenle-foto" placeholder="Fotoğraf (URL)" required>
+          <textarea id="duzenle-desc" placeholder="Açıklama" required></textarea>
+          <div id="duzenle-renkler" class="renkler-row"></div>
+          <button type="submit" class="ekle-btn">Kaydet</button>
+        </form>
+      </div>
+    </div>
+
+    <a href="index.html" class="siteyi-goruntule-btn" target="_blank">
+      <i class="fa-solid fa-globe"></i> Siteyi Görüntüle
+    </a>
+  </div>
+  <script src="admin.js" type="module"></script>
+</body>
+</html>
+
